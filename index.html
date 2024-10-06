@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homenagem Para Minha Namorada</title>
+  <style>
+    /* Fonte do Google - moderna */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+
+    /* Estilo do corpo */
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #a8d8ea, #f7f7f7);
+      font-family: 'Montserrat', sans-serif;
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      color: #0056b3;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 15px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #0073e6;
+    }
+
+    /* Seções */
+    section {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .section-bg {
+      background-color: #f0f8ff;
+    }
+
+    /* Carrossel */
+    .carousel-container {
+      max-width: 400px;
+      margin: 20px auto;
+      position: relative;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      border-radius: 20px;
+      border: 5px solid #0073e6;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    .prev {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Seção Matuê */
+    .matue-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .matue-section img {
+      width: 150px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .music-quote {
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #15254e;
+    }
+
+    /* Seção Coca-Cola */
+    .coca-section img {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #777;
+      text-align: center;
+    }
+
+    /* Botão grande */
+    .button-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .big-button {
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .big-button:hover {
+      background-color: #d81b60;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      h1, h2 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .big-button {
+        font-size: 18px;
+        padding: 12px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seção 1: Carrossel -->
+  <section>
+    <h1>Para a Pessoa Mais Especial do Mundo</h1>
+    <p>"Você é o Sol me dizendo bom dia"</p>
+    
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <img src="img3.jpg" alt="Foto dela 3">
+        <img src="img1.jpg" alt="Foto dela 1">
+        <img src="img2.jpg" alt="Foto dela 2">
+      </div>
+      <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+  </section>
+
+  <!-- Seção 2: Matuê -->
+  <section class="section-bg matue-section">
+    <h2>Nosso Som: Matuê</h2>
+    <p class="music-quote">"Viajar com você é minha terapia. Em outra vida eu já te conhecia
+      <br> traz a vibe santa sua luz me erradia"
+    </p>
+    <img src="capa.png" alt="Foto do Matuê">
+    <p>Matuê sempre toca nos momentos mais especiais com você.❤️❤️</p>
+  </section>
+
+  <!-- Seção 3: Coca-Cola -->
+  <section class="coca-section">
+    <h2>Nosso Amor pela Coca Zero</h2>
+    <img src="coca.jpg" alt="Coca Zero">
+    <p>A Coca Zero que nunca falta nos nossos momentos juntos, sempre nos acompanhando .</p>
+  </section>
+
+  <!-- Seção 4: Mensagem Fofo -->
+  <section class="section-bg">
+    <h2>Por Fim...</h2>
+    <p>"Eu sou grato por cada segundo ao seu lado. Você é a pessoa mais incrível que já conheci, e não importa onde a vida nos leve, meu coração sempre estará com você."
+      <br>TE AMO ❤️❤️❤️
+    </p>
+
+    <!-- Botão de link -->
+    <div class="button-container">
+      <button class="big-button" onclick="openOneDrive()">Clique aqui</button>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>Este site foi feito com todo o carinho do mundo para você. ❤️</p>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide img');
+    
+    function showSlides(n) {
+      if (n >= slides.length) slideIndex = 0;
+      if (n < 0) slideIndex = slides.length - 1;
+
+      slides.forEach((slide, index) => {
+        slide.style.display = (index === slideIndex) ? 'block' : 'none';
+      });
+    }
+
+    function moveSlide(n) {
+      slideIndex += n;
+      showSlides(slideIndex);
+    }
+
+    // Iniciar carrossel
+    showSlides(slideIndex);
+
+    // Função para abrir o link do OneDrive
+    function openOneDrive() {
+      window.open("https://1drv.ms/v/s!ArOXih1E3dBPjwVsPpUA5rSfOkeF", "_blank");
+    }
+  </script>
+</body>
+</html>
